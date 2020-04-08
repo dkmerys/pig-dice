@@ -1,15 +1,43 @@
-# _My Portfolio_
+# _PIG DICE_
 
-#### _HTML, CSS, & JavaScript Exercise for Epicodus, 03.27.2020_
+#### _HTML, CSS, & JavaScript Exercise for Epicodus, 04.8.2020_
 
-#### By _**Daniel Merys**_
+#### By _**Daniel Merys & Kelly Eidsvik & Mark Gridley**_
 
 ## Description
 
-_This website is rudimentary example of HTML, CSS, Bootstrap, Jquery, and JavaScript skills learned in the first 2 weeks of Epicodus training._
+_This application is an online version of the game "Pig Dice" built using HTML, CSS, JavaScript and jQuery.
 
-_https://github.com/dkmerys/Prog-Lang-Suggest_
-_https://dkmerys.github.io/Prog-Lang-Suggest_
+Specs - Roll Button
+input: when clicked, generates random number between 1-6.
+output: number between 1-6
+
+Specs - Number generator
+input: player rolls 1
+output: Nothing is added to counter and hide roll and hold buttons
+
+Specs - 
+input: Numbers 1-5 
+output: it is added to their running total.
+
+Specs - Hold Button
+input: User presses hold button
+output: Running total is added to Counter and user's "roll" and "hold" buttons are hidden, other set of "roll" and "hold" buttons appear
+
+Specs - Counter
+input: running total is sent to counter
+output: counter increases by amount equal to running total
+
+Specs - Victory
+input: counter reaches 100
+output: victory message displayed and "new game?" button appears, both sets of "roll" and "hold" buttons are hidden 
+
+Specs - New game
+input: New game button pressed
+output: Counters reset and new game begins
+
+_https://github.com/dkmerys/_
+_https://dkmerys.github.io/_
 
 
 ## Setup/Installation Requirements
