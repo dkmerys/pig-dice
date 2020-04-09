@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
   <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/oddballz" type="text/css"/>
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
   <title>🐖PIG DICE🐖</title>
@@ -14,27 +15,15 @@
     <form id="pig-dice">
     <div class="row">
       <div class="col-md-5">
-        <p>Dice Roll: <span class="diceRoll1"></span></p>
-        <p>Turn Score: <span class="turnScore1"></span></p>
-        <p>Overall Score: <span class="overallScore1"></span></p>
-        <button type="button" class="btn btn-default" id="player1-roll">ROLL</button>
+        <p>Current Player: <span id="current-player"></span></p>
+        <p>Round Score: <span id="round-score"></span></p>
+        <p>Player 1 Total Score: <span id="player1-score"></span></p>
+        <p>Player 2 Total Score: <span id="player2-score"></span></p>
+        <button type="button" class="btn btn-default btn-lg" id="roll">ROLL</button>
         <br>
         <br>
-        <button type="button" class="btn btn-default btn-lg" id="player1-hold">HOLD</button>
+        <button type="button" class="btn btn-default btn-lg" id="hold">HOLD</button>
       </div>
-      <div class="col-md-2">
-        <button type="button" class="btn btn-default btn-lg active" id="new-game">New Game</button>
-      </div>
-      <div class="col-md-5">
-        <p>Dice Roll: <span class="diceRoll2"></span></p>
-        <p>Turn Score: <span class="turnScore2"></span></p>
-        <p>Overall Score: <span class="overallScore2"></span></p>
-        <button type="button" class="btn btn-default" id="player2-roll">ROLL</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-default btn-lg" id="player2-hold">HOLD</button>
-
-        <div>
           <p><span id="results"></span></p>
         </div>
       </div>

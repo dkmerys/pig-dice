@@ -1,3 +1,15 @@
 .btn {
   margin-left: 225px;
 }
+
+p {
+  font-family: 'OddBallzRegular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+#roll, #hold {
+  font-family: 'OddBallzRegular';
+  font-weight: normal;
+  font-style: normal;
+}
