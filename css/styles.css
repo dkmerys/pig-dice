@@ -1,14 +1,48 @@
-.btn {
+h1 { 
+  font-family: 'Schoolbell', cursive;
+  font-size: xxx-large;
+  color: white;
+  -webkit-text-stroke-width: 1.25px;
+  -webkit-text-stroke-color: black;
+  margin-left: 25px;
+
+}
+
+#sun { 
+  -webkit-text-stroke-width: .15px;
+}
+
+.container {
   margin-left: 225px;
+  margin-top: 150px;
 }
 
 p {
   font-family: 'Schoolbell', cursive;
-  font-size: x-large;
+  font-size: xx-large;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+body {
+  background-image: url("https://wallpapercave.com/wp/wp3228055.jpg")
 }
 
 #roll, #hold {
-  background-image: url("http://4.bp.blogspot.com/-ArfR_qF1z4o/UOuV4yiHq6I/AAAAAAAAADQ/K1uJt1bCQj4/s1600/gravity_falls___waddles_by_timeimpact-d5daxxm.png");
+  background-image: url("http://vignette4.wikia.nocookie.net/gravityfalls/images/8/89/S1e18_-_Waddles_-_Transparent_.png/revision/latest/scale-to-width-down/94?cb=20130624070218");
   font-family: 'Schoolbell', cursive;
   font-size: x-large;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#hold {
+  background-image: url("http://vignette4.wikia.nocookie.net/gravityfalls/images/8/89/S1e18_-_Waddles_-_Transparent_.png/revision/latest/scale-to-width-down/94?cb=20130624070218");
+  font-family: 'Schoolbell', cursive;
+  font-size: x-large;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }

@@ -44,7 +44,10 @@ Game.prototype.addRoll = function () {
 
 Game.prototype.addRound = function () {
   this.currentPlayer.totalScore = this.currentPlayer.totalScore + this.currentPlayer.roundScore;
-}
+  if (this.currentPlayer.totalScore >= 100) {
+    this.winner();
+  };
+};
 
 // what happens when we hold?
 // roundScore is added to totalScore
@@ -55,6 +58,10 @@ Game.prototype.addRound = function () {
 
 
 // UI Logic
+Game.prototype.winner = function () {
+  $("#results").html("<h1>Congratulations! You are the winner! Off to the market you go!</h1>")
+}
+
 $(document).ready(function() {
   $("#roll").click(function(){
     $("#player1-score").text("" + newGame.players[0].totalScore + "");

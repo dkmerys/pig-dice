@@ -12,6 +12,7 @@
 </head>
 <body>
   <div class="container">
+    <h1>Pig Dice<span id="sun">☀️</span></h1>
     <form id="pig-dice">
     <div class="row">
       <div class="col-md-5">
@@ -19,16 +20,19 @@
         <p>Round Score: <span id="round-score"></span></p>
         <p>Player 1 Total Score: <span id="player1-score"></span></p>
         <p>Player 2 Total Score: <span id="player2-score"></span></p>
-        <button type="button" class="btn btn-default btn-lg" id="roll">ROLL</button>
-        <br>
-        <br>
-        
-        <button type="button" class="btn btn-default btn-lg" id="hold">HOLD</button>
-        
       </div>
-          <p><span id="results"></span></p>
-        </div>
+    </div>
+    <div class="row">  
+      <div class="col-md-3">
+      <button type="button" class="btn btn-default btn-lg" id="roll">ROLL</button>
       </div>
+      <div class="col-md-3">
+      <button type="button" class="btn btn-default btn-lg" id="hold">HOLD</button>
+      </div>
+      <div class="col-md-6">
+      <p><span id="results"></span></p>
+      </div>
+    </div>
     </div>
     </form>
   </div>
