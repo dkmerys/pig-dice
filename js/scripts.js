@@ -29,15 +29,16 @@ this.currentPlayer = this.players[this.currentPlayerIndex];
 
 var roll = function() {
   var dieRoll = Math.floor(Math.random() * 6) +1;
-   if (dieRoll === 1) {
-   switchTurn()
-   }
-  // } else
     return dieRoll
 }
 
+  
 Game.prototype.addRoll = function () {
   this.currentPlayer.roundScore = this.currentPlayer.roundScore + roll();
+    if (roll === 1) {
+      this.currentPlayer.roundScore = 0
+      newGame.switchTurn()
+    }
   console.log(this.currentPlayer.roundScore); 
 };
 // Game.prototype.addRoll = function () {
@@ -47,7 +48,6 @@ Game.prototype.addRoll = function () {
 // };
 
 Game.prototype.addRound = function () {
-  
   this.currentPlayer.totalScore = this.currentPlayer.totalScore + this.currentPlayer.roundScore;
 }
 
@@ -79,15 +79,5 @@ $(document).ready(function() {
     newGame.addRound();
     newGame.switchTurn();
   });
-
-  
-
-  // $("#player2-roll").click(function() {
-  //   player2Total.addRoll()
-  // });
-
-  // var player2Hold = $("#player2-hold").click();
-  
  
-  
 });
