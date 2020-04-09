@@ -5,7 +5,7 @@ function Game(player1, player2){
   this.currentPlayer = "player1";
 }
 
-function Player(){
+function Player(roundScore, totalScore){
   this.roundScore = 0;
   this.totalScore = 0;
 }
@@ -64,7 +64,7 @@ $(document).ready(function() {
   });
 
   $("#player1-hold").click(function(){
-    player1.addRound()
+    Game.currentPlayer.addRound()
   });
 
   // $("#player2-roll").click(function() {
