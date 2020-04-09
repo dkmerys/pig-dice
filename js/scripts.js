@@ -20,9 +20,8 @@ console.log(newGame)
 
 
 Game.prototype.switchTurn = function () {
- // this.players[this.currentPlayerIndex].totalScore += this.players[this.currentPlayerIndex].roundScore;
   console.log(this.players[this.currentPlayerIndex].totalScore)
-  this.players[this.currentPlayerIndex].roundScore = 0;  // turn roundscore to 0
+  this.players[this.currentPlayerIndex].roundScore = 0;
   this.currentPlayerIndex = 1 - this.currentPlayerIndex;
   this.currentPlayer = this.players[this.currentPlayerIndex];
 }
@@ -47,7 +46,6 @@ Game.prototype.addRound = function () {
   this.currentPlayer.totalScore = this.currentPlayer.totalScore + this.currentPlayer.roundScore;
 }
 
-
 // what happens when we hold?
 // roundScore is added to totalScore
   // if >= 100, player wins
@@ -59,6 +57,8 @@ Game.prototype.addRound = function () {
 // UI Logic
 $(document).ready(function() {
   $("#roll").click(function(){
+    $("#player1-score").text("" + newGame.players[0].totalScore + "");
+    $("#player2-score").text("" + newGame.players[1].totalScore + "");
     newGame.addRoll();
     $("#round-score").text("" + newGame.currentPlayer.roundScore + "")
   });
@@ -66,9 +66,7 @@ $(document).ready(function() {
   $("#hold").click(function(){
     newGame.addRound();
     newGame.switchTurn();
-    $("#player1-score").text("" + newGame.r1.totalScore + "")
-    $("#player2-score").text("" + newGame.Player2.totalScore + "")
-
+    $("#player1-score").text("" + newGame.players[0].totalScore + "");
+    $("#player2-score").text("" + newGame.players[1].totalScore + "");
   });
- 
 });

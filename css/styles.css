@@ -3,13 +3,12 @@
 }
 
 p {
-  font-family: 'OddBallzRegular';
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Schoolbell', cursive;
+  font-size: x-large;
 }
 
 #roll, #hold {
-  font-family: 'OddBallzRegular';
-  font-weight: normal;
-  font-style: normal;
+  background-image: url("http://4.bp.blogspot.com/-ArfR_qF1z4o/UOuV4yiHq6I/AAAAAAAAADQ/K1uJt1bCQj4/s1600/gravity_falls___waddles_by_timeimpact-d5daxxm.png");
+  font-family: 'Schoolbell', cursive;
+  font-size: x-large;
 }
