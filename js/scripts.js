@@ -1,11 +1,13 @@
 // back-end
 function Game(player1, player2){
-  this.player1 = player1;
-  this.player2 = player2;
-  this.currentPlayer = "player1";
+  this.players = [player1, player2];
+  this.currentPlayerIndex = 0;
+  this.currentPlayer = this.players[0];
 }
 
-function Player(roundScore, totalScore){
+
+
+function Player(){
   this.roundScore = 0;
   this.totalScore = 0;
 }
@@ -13,25 +15,40 @@ function Player(roundScore, totalScore){
 var player1 = new Player();
 var player2 = new Player();
 var newGame = new Game(player1, player2);
+var currentPlayer = newGame.currentPlayer[newGame.currentPlayerIndex];
 console.log(newGame)
-// var player1Total = new Game(0, 0);
-// var player2Total = new Game(0, 0);
+//console.log(rrentPlayer);
+//console.log(currentPlayerIndex);
 
+Game.prototype.switchTurn = function () {
+this.currentPlayerIndex.roundScore += this.currentPlayerIndex.totalScore;
+this.currentPlayerIndex.roundScore = 0;  // turn roundscore to 0
+this.currentPlayerIndex = 1 - this.currentPlayerIndex;
+this.currentPlayer = this.players[this.currentPlayerIndex];
+}
 
 var roll = function() {
   var dieRoll = Math.floor(Math.random() * 6) +1;
-  return dieRoll
+   if (dieRoll === 1) {
+   switchTurn()
+   }
+  // } else
+    return dieRoll
 }
 
 Game.prototype.addRoll = function () {
   this.currentPlayer.roundScore = this.currentPlayer.roundScore + roll();
   console.log(this.currentPlayer.roundScore); 
 };
+// Game.prototype.addRoll = function () {
+//   this.currentPlayer.roundScore = this.currentPlayer.roundScore + roll();
+//   console.log(this.currentPlayer.roundScore); 
+      
+// };
 
 Game.prototype.addRound = function () {
   
-  this.player1.totalScore = this.totalScore + this.roundScore
-  this.player2.totalScore = this.totalScore + this.roundScore
+  this.currentPlayer.totalScore = this.currentPlayer.totalScore + this.currentPlayer.roundScore;
 }
 
 
@@ -41,11 +58,6 @@ Game.prototype.addRound = function () {
 // if not 1, add to roundScore each time "roll" is clicked
 // if 1, switch player
 // bust or hold, run this guy. hold or die function
-if(this.currentPlayer === "player1"){
-  this.currentPlayer = "player2"
-} else {
-  this.currentPlayer = "player1"
-}
 
 
 // what happens when we hold?
@@ -59,13 +71,16 @@ if(this.currentPlayer === "player1"){
 // UI Logic
 $(document).ready(function() {
   $("#player1-roll").click(function(){
-    Game.currentPlayer.addRoll();
+    newGame.addRoll();
     // $("#results").append(player1.roundScore);
   });
 
   $("#player1-hold").click(function(){
-    Game.currentPlayer.addRound()
+    newGame.addRound();
+    newGame.switchTurn();
   });
+
+  
 
   // $("#player2-roll").click(function() {
   //   player2Total.addRoll()
